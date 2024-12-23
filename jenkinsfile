@@ -1,0 +1,22 @@
+node {
+    def branch = env.BRANCH_NAME
+
+    // Checkout source code
+    stage('Checkout') {
+        checkout scm
+    }
+
+    // Run tests for all branches
+    stage('Run Tests') {
+        echo "Running tests on branch: ${branch}"
+        sh 'python3 -m unittest tests/test.py'
+    }
+
+    // If on main branch, build Docker image
+    if (branch == 'main') {
+        stage('Docker Build') {
+            echo "Building Docker image for main branch"
+            sh 'docker build -t my-app:latest .'
+        }
+    }
+}
