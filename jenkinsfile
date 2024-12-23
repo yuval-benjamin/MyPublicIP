@@ -1,22 +1,33 @@
+IMAGE_NAME = 'my-app'
+IMAGE_TAG = '1.0.0'
+REGISTRY_URL = 'yuvalbenjamin'
+MAIN_BRANCH = 'main'
+
 node {
-    def branch = env.BRANCH_NAME
+    withCredentials([kubernetesSecret(credentialsId: 'docker-credentials', secretKey: '.dockercfg', variable: 'DOCKER_CFG')]) {
+ 
+        def branch = env.BRANCH_NAME
 
-    // Checkout source code
-    stage('Checkout') {
-        checkout scm
-    }
-
-    // Run tests for all branches
-    stage('Run Tests') {
-        echo "Running tests on branch: ${branch}"
-        sh 'python3 -m unittest tests/test.py'
-    }
-
-    // If on main branch, build Docker image
-    if (branch == 'main') {
-        stage('Docker Build') {
-            echo "Building Docker image for main branch"
-            sh 'docker build -t my-app:latest .'
+        stage('Checkout') {
+            checkout scm
         }
+
+        stage('Run Tests & Build Docker Image') { 
+
+            // If on main branch, push Docker image
+            if (branch == MAIN_BRANCH) {
+                final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
+                sh """
+                    echo ${DOCKER_CFG} > ~/.docker/config.json
+                    docker build -t ${final_image_name} ./
+                    docker push ${final_image_name}
+                    docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
+                    docker push ${REGISTRY_URL}/${IMAGE_NAME}:latest
+                """
+            } else {
+                sh 'docker build --target tester -t ${IMAGE_NAME}-test ./'
+            }
+        }
+
     }
 }

@@ -1,13 +1,27 @@
-FROM python:3.7-alpine
+# Only download requirements once
+FROM python:3.13-alpine as builder
+WORKDIR /install
+COPY src/requirements.txt .
+RUN pip install --prefix=/install -r requirements.txt
+ 
+# Run tests
+FROM python:3.13-alpine as tester
 
-ADD ./src /app
+COPY --from=builder /install /usr/local
+COPY ./src /src
+COPY ./tests /tests
+
+RUN python3 -m unittest /tests/test.py
+
+# For production
+FROM python:3.13-alpine
+
+COPY --from=tester /src /app
+COPY --from=builder /install /usr/local
 
 WORKDIR /app
 
-RUN pip install -r requirements.txt
-
 RUN chown -R 1005:1005 /app
-
 USER 1005
 
 ENV PORT 80
