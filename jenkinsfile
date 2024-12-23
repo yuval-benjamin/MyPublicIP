@@ -21,7 +21,7 @@ podTemplate(label: 'mypod', containers: [containerTemplate(name: 'docker', image
                     if (branch == MAIN_BRANCH) {
                         final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
                         sh """
-                            echo ${DOCKER_CFG} > ~/.docker/config.json
+                            docker login -u ${USERNAME} -p ${PASSWORD}
                             docker build -t ${final_image_name} ./
                             docker push ${final_image_name}
                             docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
