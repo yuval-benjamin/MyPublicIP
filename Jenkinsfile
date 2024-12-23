@@ -1,12 +1,17 @@
-IMAGE_NAME = 'my-app'
+IMAGE_NAME = 'my-public-ip'
 IMAGE_TAG = '1.0.0'
 REGISTRY_URL = 'yuvalbenjamin'
 MAIN_BRANCH = 'main'
 
-podTemplate(label: 'mypod', containers: [containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true)],
+podTemplate(label: 'mypod',
+    serviceAccount: 'deployer',
+    containers: [
+        containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true),
+        containerTemplate(name: 'helm', image: 'alpine/helm', command: 'cat', ttyEnabled: true)
+    ],
     volumes: [hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),]) {
     node('mypod') {
-        withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
 
             def branch = env.BRANCH_NAME
 
@@ -21,7 +26,7 @@ podTemplate(label: 'mypod', containers: [containerTemplate(name: 'docker', image
                     if (branch == MAIN_BRANCH) {
                         final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
                         sh """
-                            docker login -u ${USERNAME} -p ${PASSWORD}
+                            docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
                             docker build -t ${final_image_name} ./
                             docker push ${final_image_name}
                             docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
@@ -31,6 +36,17 @@ podTemplate(label: 'mypod', containers: [containerTemplate(name: 'docker', image
                         sh "docker build --target tester -t ${IMAGE_NAME}-test ./"
                     }
                 }
+            }
+
+            // If on main branch, install the Helm chart
+            if (branch == MAIN_BRANCH) {
+
+                stage('Install Helm Chart') {
+                    container('helm') {
+                        sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
+                    }
+                }
+
             }
 
             stage('Cleanup') {
