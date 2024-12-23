@@ -3,31 +3,41 @@ IMAGE_TAG = '1.0.0'
 REGISTRY_URL = 'yuvalbenjamin'
 MAIN_BRANCH = 'main'
 
-node {
-    withCredentials([kubernetesSecret(credentialsId: 'docker-credentials', secretKey: '.dockercfg', variable: 'DOCKER_CFG')]) {
- 
-        def branch = env.BRANCH_NAME
+podTemplate(label: 'mypod', containers: [containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true)],
+    volumes: [hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),]) {
+    node('mypod') {
+        withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 
-        stage('Checkout') {
-            checkout scm
-        }
+            def branch = env.BRANCH_NAME
 
-        stage('Run Tests & Build Docker Image') { 
+            stage('Checkout') {
+                checkout scm
+            }
+            
+            stage('Run Tests & Build Docker Image') { 
+                container('docker') {
 
-            // If on main branch, push Docker image
-            if (branch == MAIN_BRANCH) {
-                final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
-                sh """
-                    echo ${DOCKER_CFG} > ~/.docker/config.json
-                    docker build -t ${final_image_name} ./
-                    docker push ${final_image_name}
-                    docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
-                    docker push ${REGISTRY_URL}/${IMAGE_NAME}:latest
-                """
-            } else {
-                sh 'docker build --target tester -t ${IMAGE_NAME}-test ./'
+                    // If on main branch, push Docker image
+                    if (branch == MAIN_BRANCH) {
+                        final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
+                        sh """
+                            echo ${DOCKER_CFG} > ~/.docker/config.json
+                            docker build -t ${final_image_name} ./
+                            docker push ${final_image_name}
+                            docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
+                            docker push ${REGISTRY_URL}/${IMAGE_NAME}:latest
+                        """
+                    } else {
+                        sh "docker build --target tester -t ${IMAGE_NAME}-test ./"
+                    }
+                }
+            }
+
+            stage('Cleanup') {
+                container('docker') {
+                    sh 'docker system prune -af'
+                }
             }
         }
-
     }
 }

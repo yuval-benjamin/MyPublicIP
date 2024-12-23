@@ -1,11 +1,11 @@
 # Only download requirements once
-FROM python:3.13-alpine as builder
+FROM python:3.13-alpine AS builder
 WORKDIR /install
 COPY src/requirements.txt .
 RUN pip install --prefix=/install -r requirements.txt
  
 # Run tests
-FROM python:3.13-alpine as tester
+FROM python:3.13-alpine AS tester
 
 COPY --from=builder /install /usr/local
 COPY ./src /src
