@@ -38,10 +38,15 @@ podTemplate(label: 'mypod',
                 }
             }
 
-            stage('Install Helm Chart') {
-                container('helm') {
-                    sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
+            // If on main branch, install the Helm chart
+            if (branch == MAIN_BRANCH) {
+
+                stage('Install Helm Chart') {
+                    container('helm') {
+                        sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
+                    }
                 }
+
             }
 
             stage('Cleanup') {
