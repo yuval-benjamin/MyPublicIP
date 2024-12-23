@@ -4,6 +4,7 @@ REGISTRY_URL = 'yuvalbenjamin'
 MAIN_BRANCH = 'main'
 
 podTemplate(label: 'mypod',
+    serviceAccount: 'deployer',
     containers: [
         containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true),
         containerTemplate(name: 'helm', image: 'alpine/helm', command: 'cat', ttyEnabled: true)
@@ -39,8 +40,7 @@ podTemplate(label: 'mypod',
 
             stage('Install Helm Chart') {
                 container('helm') {
-                    // sh "helm package ./helm"
-                    sh "helm upgrade --install ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
+                    sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
                 }
             }
 
