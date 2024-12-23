@@ -3,8 +3,7 @@ import requests
 
 # Returns the public IP Address of the user
 def get_public_ip():
-    response = requests.get('https://api.ipify.org?format=json')
-    public_ip = response.json()['ip']
+    public_ip = requests.get('https://checkip.amazonaws.com').text
     return public_ip
 
 
@@ -18,4 +17,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", port=8080)
