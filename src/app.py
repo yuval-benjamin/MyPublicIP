@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-# from flask import request, jsonify
 import requests
 
 # Returns the public IP Address of the user
