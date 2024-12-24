@@ -11,7 +11,7 @@ This is a Python Flask app to discover your public IP.
 # Deploy on your own
 ## Prerequisites
 1. A Kuberenetes cluster
-2. A Jenkins instance, preferably on your K8s cluster. If you do not have one follow this [tutorial](https://github.com/yuval-benjamin/MyPublicIP/blob/main/docs/jenkins-installation/README.md)
+2. A Jenkins instance, preferably on your K8s cluster. If you do not have one follow this [tutorial](https://github.com/yuval-benjamin/MyPublicIP/tree/main/docs/jenkins-installation)
 
 ## Steps
 
