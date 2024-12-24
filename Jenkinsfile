@@ -12,46 +12,57 @@ podTemplate(label: 'mypod',
     volumes: [hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),]) {
     node('mypod') {
         withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-
+            
             def branch = env.BRANCH_NAME
 
-            stage('Checkout') {
-                checkout scm
-            }
-            
-            stage('Run Tests & Build Docker Image') { 
-                container('docker') {
-
-                    // If on main branch, push Docker image
-                    if (branch == MAIN_BRANCH) {
-                        final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
-                        sh """
-                            docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
-                            docker build -t ${final_image_name} ./
-                            docker push ${final_image_name}
-                            docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
-                            docker push ${REGISTRY_URL}/${IMAGE_NAME}:latest
-                        """
-                    } else {
-                        sh "docker build --target tester -t ${IMAGE_NAME}-test ./"
-                    }
+            try {
+                stage('Checkout') {
+                    checkout scm
                 }
-            }
+                
+                stage('Run Tests & Build Docker Image') { 
+                    container('docker') {
 
-            // If on main branch, install the Helm chart
-            if (branch == MAIN_BRANCH) {
-
-                stage('Install Helm Chart') {
-                    container('helm') {
-                        sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
+                        // If on main branch, push Docker image
+                        if (branch == MAIN_BRANCH) {
+                            final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
+                            sh """
+                                docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+                                docker build -t ${final_image_name} ./
+                                docker push ${final_image_name}
+                                docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
+                                docker push ${REGISTRY_URL}/${IMAGE_NAME}:latest
+                            """
+                        } else {
+                            sh "docker build --target tester -t ${IMAGE_NAME}-test ./"
+                        }
                     }
                 }
 
-            }
+                // If on main branch, install the Helm chart
+                if (branch == MAIN_BRANCH) {
 
-            stage('Cleanup') {
-                container('docker') {
-                    sh 'docker system prune -af'
+                    stage('Install Helm Chart') {
+                        container('helm') {
+                            sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
+                        }
+                    }
+
+                }
+
+            } finally {
+                stage('Cleanup') {
+                    container('docker') {
+                        sh 'docker system prune -af'
+                    }
+                }
+
+                stage('Send email with results') {
+                    emailext (
+                        to: 'yuvalbenjamin111@gmail.com',
+                        subject: "Jenkins Build - ${branch}",
+                        body: "Build ${env.JOB_NAME} number ${env.BUILD_NUMBER} has finished",
+                    )
                 }
             }
         }
