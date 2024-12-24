@@ -7,7 +7,8 @@ podTemplate(label: 'mypod',
     serviceAccount: 'deployer',
     containers: [
         containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true),
-        containerTemplate(name: 'helm', image: 'alpine/helm', command: 'cat', ttyEnabled: true)
+        containerTemplate(name: 'helm', image: 'alpine/helm', command: 'cat', ttyEnabled: true),
+        containerTemplate(name: 'uplift', image: 'gembaadvantage/uplift', command: 'cat', ttyEnabled: true)
     ],
     volumes: [hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),]) {
     node('mypod') {
@@ -40,6 +41,12 @@ podTemplate(label: 'mypod',
 
             // If on main branch, install the Helm chart
             if (branch == MAIN_BRANCH) {
+
+                stage('Bump Version') {
+                    container('uplift') {
+                        sh "uplift --version"
+                    }
+                }
 
                 stage('Install Helm Chart') {
                     container('helm') {

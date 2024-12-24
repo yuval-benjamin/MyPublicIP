@@ -1,0 +1,20 @@
+# .uplift.yml
+# Example of bumping a package.json file
+
+github:
+  url: https://github.com
+
+bumps:
+- file: helm/Chart.yaml
+  regex:
+  - pattern: "appVersion: $VERSION"
+    semver: true
+- file: Jenkinsfile
+  regex:
+  - pattern: "IMAGE_TAG = $VERSION"
+    semver: true
+commitAuthor:
+  name: "yuval-bot"
+  email: "yuval-bot@gmail.com"
+
+commitMessage: "ci(release): updating version: $VERSION. [ci skip]"
