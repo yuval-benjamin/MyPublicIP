@@ -3,10 +3,10 @@
 This is a Python Flask app to discover your public IP.
 
 ## App Main Page
-![alt text](./images/main-page.png?raw=true "output")
+![alt text](./docs/images/main-page.png?raw=true "output")
 
 ## App Architecture 
-![alt text](./images/architecture.png?raw=true "output")
+![alt text](./docs/images/architecture.png?raw=true "output")
 
 # Deploy on your own
 ## Prerequisites
