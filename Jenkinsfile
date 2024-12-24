@@ -42,15 +42,16 @@ podTemplate(label: 'mypod',
             // If on main branch, install the Helm chart
             if (branch == MAIN_BRANCH) {
 
-                stage('Bump Version') {
-                    container('uplift') {
-                        sh "uplift --version"
-                    }
-                }
-
                 stage('Install Helm Chart') {
                     container('helm') {
                         sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
+                    }
+                }
+
+                stage('Bump Version') {
+                    container('uplift') {
+                        sh "uplift --version"
+                        sh "uplift release"
                     }
                 }
 
