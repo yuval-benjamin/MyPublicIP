@@ -22,6 +22,7 @@ This is a Python Flask app to discover your public IP.
 kubectl get pods
 ```
 The output should be something like this:
+
 ![alt text](./docs/images/kubectl-get-pods.png?raw=true "output")
 
 4. If you have created your app internally (no Ingress), you can still access the app and make sure it works using this command: 
