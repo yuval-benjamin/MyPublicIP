@@ -51,7 +51,7 @@ podTemplate(label: 'mypod',
                 stage('Bump Version') {
                     container('uplift') {
                         sh "uplift --version"
-                        sh "uplift release"
+                        // sh "uplift release"
                     }
                 }
 
