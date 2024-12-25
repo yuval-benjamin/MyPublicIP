@@ -11,8 +11,9 @@ bumps:
     semver: true
 - file: Jenkinsfile
   regex:
-  - pattern: "IMAGE_TAG = $VERSION"
+  - pattern: "IMAGE_TAG = '.*'"
     semver: true
+    count: 1
 
 commitAuthor:
   name: "yuval-bot"
