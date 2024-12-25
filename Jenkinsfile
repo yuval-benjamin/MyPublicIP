@@ -43,11 +43,6 @@ podTemplate(label: 'mypod',
                         }
                     }
 
-                    stage('Install Helm Chart') {
-                        container('helm') {
-                            sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
-                        }
-                    }
 
                     stage('Bump Version & Tag') {
                         container('uplift') {
@@ -59,6 +54,12 @@ podTemplate(label: 'mypod',
                                     uplift release --fetch-all
                                 """
                             }
+                        }
+                    }
+                    
+                    stage('Install Helm Chart') {
+                        container('helm') {
+                            sh "helm upgrade --install --debug ${IMAGE_NAME} ./helm --values ./helm/values.yaml"
                         }
                     }
 
