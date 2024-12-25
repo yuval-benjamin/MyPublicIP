@@ -7,15 +7,15 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: app
+      app: {{ .Release.Name }}
   replicas: {{ .Values.appImage.replicaCount }}
   template:
     metadata:
       labels:
-        app: app
+        app: {{ .Release.Name }}
     spec:
       containers:
-        - name: app
+        - name: {{ .Release.Name }}
           image: "{{ .Values.appImage.repository }}:{{ .Values.appImage.tag }}"
           ports:
             - containerPort: 80

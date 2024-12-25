@@ -1,6 +1,6 @@
 appImage:
   replicaCount: 1
-  repository: yuvalbenjamin/my-app
+  repository: yuvalbenjamin/my-public-ip
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -10,11 +10,10 @@ appService:
 
 resources:
   limits:
-    cpu: 500m
     memory: 512Mi
   requests:
-    cpu: 250m
-    memory: 256Mi
+    cpu: 100m
+    memory: 128Mi
 
 ingress:
   enabled: false
