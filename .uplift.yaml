@@ -13,7 +13,7 @@ bumps:
     count: 1
 
 commitAuthor:
-  name: "yuval-bot"
-  email: "yuval-bot@gmail.com"
+  name: "Jenkins-bot"
+  email: "Jenkins-bot@gmail.com"
 
 commitMessage: "ci(release): updating version: $VERSION. [ci skip]"

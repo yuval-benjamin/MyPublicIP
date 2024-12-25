@@ -1,7 +1,7 @@
 IMAGE_NAME = 'my-public-ip'
 IMAGE_TAG = '1.0.0'
 REGISTRY_URL = 'yuvalbenjamin'
-MAIN_BRANCH = 'fix/bump-versions'
+MAIN_BRANCH = 'main'
 
 podTemplate(label: 'mypod',
     serviceAccount: 'deployer',
