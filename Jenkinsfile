@@ -27,7 +27,7 @@ podTemplate(label: 'mypod',
                     }
                 }
 
-                // If on main branch, install the Helm chart
+                // If on main branch, install the Helm chartm, build the Docker image and bump the version
                 if (env.BRANCH_NAME == MAIN_BRANCH) {
 
                     stage('Build Docker Image') { 
@@ -78,7 +78,6 @@ podTemplate(label: 'mypod',
                 throw err
 
             } finally {
-
 
                 stage('Cleanup') {
                     if (env.BRANCH_NAME == MAIN_BRANCH) {
