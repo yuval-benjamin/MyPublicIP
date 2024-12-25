@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+
 ## [v0.4.3](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.3) - 2024-12-25
 
 - [`a2619b7`](https://github.com/yuval-benjamin/MyPublicIP/commit/a2619b74e3362751c1eef04ebb0b743ae5c68daa) Merge branch 'fix/jeknins-fix' of github.com:yuval-benjamin/MyPublicIP into fix/jeknins-fix
@@ -26,6 +27,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - [`5a169d4`](https://github.com/yuval-benjamin/MyPublicIP/commit/5a169d4a00b992845b073d6b5b8c5c0cfbe6aec5) fix: the jenkinsfile has a problem
 - [`ef7fb3e`](https://github.com/yuval-benjamin/MyPublicIP/commit/ef7fb3e3505d7651d30bbcd41a14511baa5c327d) ci: Updating version: v0.4.0. [ci skip]
+=======
+## [v0.4.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.0) - 2024-12-25
+
+- [`46d3694`](https://github.com/yuval-benjamin/MyPublicIP/commit/46d3694af654209e15da5ba13649b26e749bd097) Merge pull request #11 from yuval-benjamin/fix/helm
+- [`15fe05b`](https://github.com/yuval-benjamin/MyPublicIP/commit/15fe05b72cb73869dc750ee50d9531d47343aa5d) fix: minor changes
+- [`3d16aaa`](https://github.com/yuval-benjamin/MyPublicIP/commit/3d16aaa42e3b37207185115ed180bc3166eccc0d) fix: minor changes to yamls
+- [`e76bc35`](https://github.com/yuval-benjamin/MyPublicIP/commit/e76bc35d0a2bff3855c59e1d91c1fd0d154b606a) Merge pull request #10 from yuval-benjamin/feat/add-helm
+- [`d318fdb`](https://github.com/yuval-benjamin/MyPublicIP/commit/d318fdb086498d37d68b303989390719ac9919dd) feat: adding labels to all yamls
+
 
 ## [v0.3.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.3.0) - 2024-12-25
 
