@@ -4,6 +4,10 @@ github:
 bumps:
 - file: helm/Chart.yaml
   regex:
+  - pattern: "version: $VERSION"
+    semver: true
+- file: helm/Chart.yaml
+  regex:
   - pattern: "appVersion: $VERSION"
     semver: true
 - file: Jenkinsfile

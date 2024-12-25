@@ -19,6 +19,25 @@ podTemplate(label: 'mypod',
                     checkout scm
                 }
 
+                stage('Run Tests & Build Docker Image') { 
+                    container('docker') {
+
+                        // If on main branch, push Docker image
+                        if (branch == MAIN_BRANCH) {
+                            final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
+                            sh """
+                                docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+                                docker build -t ${final_image_name} ./
+                                docker push ${final_image_name}
+                                docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
+                                docker push ${REGISTRY_URL}/${IMAGE_NAME}:latest
+                            """
+                        } else {
+                            sh "docker build --target tester -t ${IMAGE_NAME}-test ./"
+                        }
+                    }
+                }
+
                 // If on main branch, install the Helm chart
                 if (env.BRANCH_NAME == MAIN_BRANCH) {
 
