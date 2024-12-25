@@ -8,7 +8,8 @@ podTemplate(label: 'mypod',
     containers: [
         containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true),
         containerTemplate(name: 'helm', image: 'alpine/helm', command: 'cat', ttyEnabled: true),
-        containerTemplate(name: 'uplift', image: 'gembaadvantage/uplift', command: 'cat', ttyEnabled: true)
+        containerTemplate(name: 'uplift', image: 'gembaadvantage/uplift', command: 'cat', ttyEnabled: true),
+        containerTemplate(name: 'python', image: 'python:3.13-alpine', command: 'cat', ttyEnabled: true),
     ],
     volumes: [hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),]) {
     node('mypod') {
@@ -19,11 +20,17 @@ podTemplate(label: 'mypod',
                     checkout scm
                 }
 
-                stage('Run Tests & Build Docker Image') { 
-                    container('docker') {
+                stage('Run Test') {
+                    container('python') {
+                        sh "python3 -m unittest /tests/test.py"
+                    }
+                }
 
-                        // If on main branch, push Docker image
-                        if (env.BRANCH_NAME == MAIN_BRANCH) {
+                // If on main branch, install the Helm chart
+                if (env.BRANCH_NAME == MAIN_BRANCH) {
+
+                    stage('Build Docker Image') { 
+                        container('docker') {
                             final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
                             sh """
                                 docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
@@ -32,14 +39,8 @@ podTemplate(label: 'mypod',
                                 docker tag ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest
                                 docker push ${REGISTRY_URL}/${IMAGE_NAME}:latest
                             """
-                        } else {
-                            sh "docker build --target tester -t ${IMAGE_NAME}-test ./"
                         }
                     }
-                }
-
-                // If on main branch, install the Helm chart
-                if (env.BRANCH_NAME == MAIN_BRANCH) {
 
                     stage('Install Helm Chart') {
                         container('helm') {
@@ -76,9 +77,12 @@ podTemplate(label: 'mypod',
 
             } finally {
 
+
                 stage('Cleanup') {
-                    container('docker') {
-                        sh 'docker rmi -f $(docker images -aq)'
+                    if (env.BRANCH_NAME == MAIN_BRANCH) {
+                        container('docker') {
+                            sh "docker rmi ${final_image_name} ${REGISTRY_URL}/${IMAGE_NAME}:latest"
+                        }
                     }
                 }
 
