@@ -20,6 +20,3 @@ commitAuthor:
   email: "yuval-bot@gmail.com"
 
 commitMessage: "ci(release): updating version: $VERSION. [ci skip]"
-
-git:
-  ignoreDetached: true

@@ -1,5 +1,5 @@
 IMAGE_NAME = 'my-public-ip'
-IMAGE_TAG = '0.1.0'
+IMAGE_TAG = '1.0.0'
 REGISTRY_URL = 'yuvalbenjamin'
 MAIN_BRANCH = 'fix/bump-versions'
 
@@ -34,6 +34,7 @@ podTemplate(label: 'mypod',
                                 sh """
                                     git config --global --add safe.directory '${env.WORKSPACE}'
                                     git remote set-url origin https://${GIT_TOKEN}@github.com/yuval-benjamin/MyPublicIP.git
+                                    git checkout ${env.BRANCH_NAME}
                                     uplift release --fetch-all
                                 """
                             }
