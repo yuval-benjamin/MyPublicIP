@@ -39,4 +39,4 @@ and access the app on http://<KubernetesIP
 ## What's Next?
 - Moving all credentials from Jenkins to one place (e.g AWS Secrets Manager).
 - Keeping track of helm versions, maybe upload them to a designated registry.
-- Keeping all Jenkins Configuration in Git, using the Configuration As Code Plugin.
+- Keeping all Jenkins configuration in Git, using the Configuration As Code Plugin.
