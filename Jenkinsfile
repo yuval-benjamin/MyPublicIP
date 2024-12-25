@@ -23,7 +23,7 @@ podTemplate(label: 'mypod',
                     container('docker') {
 
                         // If on main branch, push Docker image
-                        if (branch == MAIN_BRANCH) {
+                        if (env.BRANCH_NAME == MAIN_BRANCH) {
                             final_image_name = "${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG}"
                             sh """
                                 docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
