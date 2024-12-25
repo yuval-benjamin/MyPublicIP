@@ -11,7 +11,7 @@ This is a Python Flask app to discover your public IP.
 # Deploy on your own
 ## Prerequisites
 1. A Kuberenetes cluster
-2. A Jenkins instance, preferably on your K8s cluster. If you do not have one follow this [tutorial](https://github.com/yuval-benjamin/MyPublicIP/tree/main/docs/jenkins-installation)
+2. A Jenkins instance, preferably on your K8s cluster, with a Slack Notification Plugin configured. If you do not have one, follow this [tutorial](https://github.com/yuval-benjamin/MyPublicIP/tree/main/docs/jenkins-installation)
 
 
 ## Steps
@@ -31,3 +31,12 @@ The output should be something like this:
 sudo kubectl port-forward svc/my-public-ip 80:80
 ```
 and access the app on http://<KubernetesIP
+
+## Challenges I Encountered 
+* Issues with creating an app password with Google - Used Slack instead. 
+* App version staying static between different commits - Used [Uplift](http://upliftci.dev), an automatic tool to bump versions and create tags, according to conventional commits (That also creates a CHANGELOG!). 
+
+## What's Next?
+- Moving all credentials from Jenkins to one place (e.g AWS Secrets Manager).
+- Keeping track of helm versions, maybe upload them to a designated registry.
+- Keeping all Jenkins configuration in Git, using the Configuration As Code Plugin.

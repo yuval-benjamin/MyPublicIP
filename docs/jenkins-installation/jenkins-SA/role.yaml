@@ -1,8 +1,8 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
-  namespace: default # The namespace where the role will be applied
-  name: deployer-role # Name of the role
+  namespace: default
+  name: deployer-role
 rules:
 - apiGroups: [ "" ]
   resources: [ "pods", "services", "endpoints", "persistentvolumeclaims", "events", "configmaps", "secrets" ]

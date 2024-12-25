@@ -19,3 +19,8 @@ Use the jenkins-SA files to create a Service Account named *deployer*:
 ```bash
 kubectl apply -f docs/jenkins-installation/jenkins-SA
 ```
+
+Now that you have working Jenkins instance, go to:  
+Manage Jenkins -> Plugins -> Install -> Slack Notification Plugin.
+
+Now you can follow this [tutorial](https://plugins.jenkins.io/slack/) to configure it to your slack channel. 
