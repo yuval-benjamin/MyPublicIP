@@ -8,31 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [v1.0.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v1.0.0) - 2024-12-25
 
-- [`e8e5715`](https://github.com/yuval-benjamin/MyPublicIP/commit/e8e5715b059c285e2521ca166332d2ced686b18f) feat!: send an email to the customer when a product is shipped
-- [`edcd0e4`](https://github.com/yuval-benjamin/MyPublicIP/commit/edcd0e44e4d524c0a8b30082ec3121c7df11e604) feat!:Trying to bump major again
-- [`979e1ac`](https://github.com/yuval-benjamin/MyPublicIP/commit/979e1ac0dc17d17970566a6a722f6eee20ee29bb) Merge branch 'fix/bump-versions' of github.com:yuval-benjamin/MyPublicIP into fix/bump-versions
-- [`a451321`](https://github.com/yuval-benjamin/MyPublicIP/commit/a4513216bc411c13586e92169d5ec0a118715297) BREAKING CHANGE: Trying to bump major
+- [`e8e5715`](https://github.com/yuval-benjamin/MyPublicIP/commit/e8e5715b059c285e2521ca166332d2ced686b18f) feat!: Trying to bump major
 
 ## [v0.2.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.2.0) - 2024-12-25
 
-- [`8d3f999`](https://github.com/yuval-benjamin/MyPublicIP/commit/8d3f999497534fb4ed1e3a35f1a58ad520508c0f) feat: Trying to bump app again
-- [`071d93f`](https://github.com/yuval-benjamin/MyPublicIP/commit/071d93f6055be992cf12763ebbe2f330fcb5155e) Merge branch 'fix/bump-versions' of github.com:yuval-benjamin/MyPublicIP into fix/bump-versions
 - [`e4512a9`](https://github.com/yuval-benjamin/MyPublicIP/commit/e4512a9575875b48929525da3b1b027b111d2c9a) feat: Trying to bump app again
 
 ## [v0.1.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.1.0) - 2024-12-25
 
-- [`d32666d`](https://github.com/yuval-benjamin/MyPublicIP/commit/d32666d26bd29c7952cbb30432800802ddc24673) fix: changed the jenkinsfile
-- [`c7f4417`](https://github.com/yuval-benjamin/MyPublicIP/commit/c7f4417e6f99e16e301463bd3a6847fae1399e09) fix: changed the jenkinsfile
-- [`d8935dc`](https://github.com/yuval-benjamin/MyPublicIP/commit/d8935dc3dae03dbee0056f62084fa4bac349d959) fix: changed the jenkinsfile
-- [`42df926`](https://github.com/yuval-benjamin/MyPublicIP/commit/42df9269015ed65af74ecae97f7b958dae0516a3) merge main
-- [`4bfbe7b`](https://github.com/yuval-benjamin/MyPublicIP/commit/4bfbe7bd8a34c395bc21d89d532fa58e21c17992) Merge pull request #7 from yuval-benjamin/feat/add-slack
-- [`bb0f92f`](https://github.com/yuval-benjamin/MyPublicIP/commit/bb0f92f3d8f55e2afe12c52209e8f1033c2e856e) feat: the pipeline now sends messages to slack
-- [`3498c7b`](https://github.com/yuval-benjamin/MyPublicIP/commit/3498c7bf6ac4432daad3c69a14f75d03c7cb03ec) Docs/adding docs (#6)
-- [`62c7e4a`](https://github.com/yuval-benjamin/MyPublicIP/commit/62c7e4a78ae4a6696a5af603b2078eeed1ff4b48) Delete .DS_Store
-- [`4bd740d`](https://github.com/yuval-benjamin/MyPublicIP/commit/4bd740d300748e65a1cc9399fb53115fa9aea2be) Docs/adding docs (#5)
-- [`d9f45e3`](https://github.com/yuval-benjamin/MyPublicIP/commit/d9f45e350fe69f7676e7dbafc88728b02faadbf8) feat: first uplift try
-- [`62a9672`](https://github.com/yuval-benjamin/MyPublicIP/commit/62a9672a5d9dba6c2db45f1c786c16fbe4b319ea) feat: first uplift try
-- [`95ce1e6`](https://github.com/yuval-benjamin/MyPublicIP/commit/95ce1e6b48d3541ebecbdcac22350727f041b41b) feat: first uplift try
 - [`7f6abdb`](https://github.com/yuval-benjamin/MyPublicIP/commit/7f6abdb8f244f2dbd6253e7e4100e73e291962b4) bugfix: removine role un-needed permissions
 - [`8e72e64`](https://github.com/yuval-benjamin/MyPublicIP/commit/8e72e6431c649170a903358fd1cb2fca82e7e1fb) Merge pull request #4 from yuval-benjamin/feat/add-helm
 - [`ac8e9b3`](https://github.com/yuval-benjamin/MyPublicIP/commit/ac8e9b35ca99cfda291f2c7751cd1e374a2e88b1) fix: now the SA has permission to deploy the app
