@@ -4,4 +4,4 @@ description: A Helm chart to deploy an app that displays your public IP address
 type: application
 
 version: 1.0.0
-appVersion: 0.1.0
+appVersion: 0.2.0
