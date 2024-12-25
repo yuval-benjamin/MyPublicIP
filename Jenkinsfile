@@ -1,5 +1,5 @@
 IMAGE_NAME = 'my-public-ip'
-IMAGE_TAG = '0.3.0'
+IMAGE_TAG = '0.4.0'
 REGISTRY_URL = 'yuvalbenjamin'
 MAIN_BRANCH = 'main'
 

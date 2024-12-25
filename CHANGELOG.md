@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.4.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.0) - 2024-12-25
+
+- [`46d3694`](https://github.com/yuval-benjamin/MyPublicIP/commit/46d3694af654209e15da5ba13649b26e749bd097) Merge pull request #11 from yuval-benjamin/fix/helm
+- [`15fe05b`](https://github.com/yuval-benjamin/MyPublicIP/commit/15fe05b72cb73869dc750ee50d9531d47343aa5d) fix: minor changes
+- [`3d16aaa`](https://github.com/yuval-benjamin/MyPublicIP/commit/3d16aaa42e3b37207185115ed180bc3166eccc0d) fix: minor changes to yamls
+- [`e76bc35`](https://github.com/yuval-benjamin/MyPublicIP/commit/e76bc35d0a2bff3855c59e1d91c1fd0d154b606a) Merge pull request #10 from yuval-benjamin/feat/add-helm
+- [`d318fdb`](https://github.com/yuval-benjamin/MyPublicIP/commit/d318fdb086498d37d68b303989390719ac9919dd) feat: adding labels to all yamls
+
 ## [v0.3.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.3.0) - 2024-12-25
 
 - [`5cfb5f1`](https://github.com/yuval-benjamin/MyPublicIP/commit/5cfb5f1e0d58e82d59c37911c60d2f686a676448) Fix/bump versions (#9)
