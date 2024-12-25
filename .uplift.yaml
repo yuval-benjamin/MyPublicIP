@@ -16,4 +16,4 @@ commitAuthor:
   name: "Jenkins-bot"
   email: "Jenkins-bot@gmail.com"
 
-commitMessage: "ci(release): updating version: $VERSION. [ci skip]"
+commitMessage: "ci: Updating version: $VERSION. [ci skip]"
