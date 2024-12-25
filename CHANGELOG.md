@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.2.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.2.0) - 2024-12-25
+
+- [`8d3f999`](https://github.com/yuval-benjamin/MyPublicIP/commit/8d3f999497534fb4ed1e3a35f1a58ad520508c0f) feat: Trying to bump app again
+- [`071d93f`](https://github.com/yuval-benjamin/MyPublicIP/commit/071d93f6055be992cf12763ebbe2f330fcb5155e) Merge branch 'fix/bump-versions' of github.com:yuval-benjamin/MyPublicIP into fix/bump-versions
+- [`e4512a9`](https://github.com/yuval-benjamin/MyPublicIP/commit/e4512a9575875b48929525da3b1b027b111d2c9a) feat: Trying to bump app again
+
 ## [v0.1.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.1.0) - 2024-12-25
 
 - [`d32666d`](https://github.com/yuval-benjamin/MyPublicIP/commit/d32666d26bd29c7952cbb30432800802ddc24673) fix: changed the jenkinsfile
