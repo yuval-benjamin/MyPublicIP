@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.4.4](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.4) - 2024-12-25
+
+- [`e8871fa`](https://github.com/yuval-benjamin/MyPublicIP/commit/e8871fa8c29e93ddfeb512ce0063a7e90b6c32e3) Docs/final docs (#13)
+- [`7f3e130`](https://github.com/yuval-benjamin/MyPublicIP/commit/7f3e130379ed1d4ab6a6b4b8bba8f8f64e95f810) Fix/jeknins fix (#12)
+- [`edf1a62`](https://github.com/yuval-benjamin/MyPublicIP/commit/edf1a622f1d6b4559051ead78f701d0a0159171e) ci: Updating version: v0.4.3. [ci skip]
+- [`a2619b7`](https://github.com/yuval-benjamin/MyPublicIP/commit/a2619b74e3362751c1eef04ebb0b743ae5c68daa) Merge branch 'fix/jeknins-fix' of github.com:yuval-benjamin/MyPublicIP into fix/jeknins-fix
+- [`ebe4bac`](https://github.com/yuval-benjamin/MyPublicIP/commit/ebe4baccd87acd3d393b0f66e05a5320e577c8a8) fix: version changed before install
+- [`68194e7`](https://github.com/yuval-benjamin/MyPublicIP/commit/68194e728d4ed5cb5c0abbd12d4b865f0d06fe5f) ci: Updating version: v0.4.2. [ci skip]
+- [`1ff85a6`](https://github.com/yuval-benjamin/MyPublicIP/commit/1ff85a602f5a5f7a079adc4f5ef8faf6d6139703) fix: versions
+- [`14192dc`](https://github.com/yuval-benjamin/MyPublicIP/commit/14192dc69562353f3dab747d137c08b8b03fea53) fix: versions
+- [`472047e`](https://github.com/yuval-benjamin/MyPublicIP/commit/472047e4eddf891d3cab79be9b35f34300eb8577) fix: versions
+- [`fb16001`](https://github.com/yuval-benjamin/MyPublicIP/commit/fb1600106c825c7e67558575ca107fd38f6b8bb1) fix: versions
+- [`4bf2870`](https://github.com/yuval-benjamin/MyPublicIP/commit/4bf287039f91dcb338f458b26a5bf060c04bcfa9) fix: versions
+- [`ce15ef2`](https://github.com/yuval-benjamin/MyPublicIP/commit/ce15ef25c156f79a23855d94a0d5a8259fba0847) fix: downgrade requirments
+- [`8ab1092`](https://github.com/yuval-benjamin/MyPublicIP/commit/8ab10923256c82c20cf3625bacee6229e4d44f6b) Merge branch 'fix/jeknins-fix' of github.com:yuval-benjamin/MyPublicIP into fix/jeknins-fix
+- [`fcf6723`](https://github.com/yuval-benjamin/MyPublicIP/commit/fcf6723f9add86350ad026e08854adc3c6e37cd9) fix: go back to old dockerfile and change jenkinsfile accordingly
+- [`bd66c7a`](https://github.com/yuval-benjamin/MyPublicIP/commit/bd66c7a2b1e1f66a6007e8d71bbaf01282b2c900) ci: Updating version: v0.4.1. [ci skip]
+- [`5a169d4`](https://github.com/yuval-benjamin/MyPublicIP/commit/5a169d4a00b992845b073d6b5b8c5c0cfbe6aec5) fix: the jenkinsfile has a problem
+- [`ef7fb3e`](https://github.com/yuval-benjamin/MyPublicIP/commit/ef7fb3e3505d7651d30bbcd41a14511baa5c327d) ci: Updating version: v0.4.0. [ci skip]
+
 
 ## [v0.4.3](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.3) - 2024-12-25
 
