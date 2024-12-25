@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v1.0.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v1.0.0) - 2024-12-25
+
+- [`e8e5715`](https://github.com/yuval-benjamin/MyPublicIP/commit/e8e5715b059c285e2521ca166332d2ced686b18f) feat!: send an email to the customer when a product is shipped
+- [`edcd0e4`](https://github.com/yuval-benjamin/MyPublicIP/commit/edcd0e44e4d524c0a8b30082ec3121c7df11e604) feat!:Trying to bump major again
+- [`979e1ac`](https://github.com/yuval-benjamin/MyPublicIP/commit/979e1ac0dc17d17970566a6a722f6eee20ee29bb) Merge branch 'fix/bump-versions' of github.com:yuval-benjamin/MyPublicIP into fix/bump-versions
+- [`a451321`](https://github.com/yuval-benjamin/MyPublicIP/commit/a4513216bc411c13586e92169d5ec0a118715297) BREAKING CHANGE: Trying to bump major
+
 ## [v0.2.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.2.0) - 2024-12-25
 
 - [`8d3f999`](https://github.com/yuval-benjamin/MyPublicIP/commit/8d3f999497534fb4ed1e3a35f1a58ad520508c0f) feat: Trying to bump app again

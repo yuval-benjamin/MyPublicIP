@@ -1,5 +1,5 @@
 IMAGE_NAME = 'my-public-ip'
-IMAGE_TAG = '1.0.1'
+IMAGE_TAG = '1.0.0'
 REGISTRY_URL = 'yuvalbenjamin'
 MAIN_BRANCH = 'fix/bump-versions'
 
