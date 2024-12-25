@@ -9,7 +9,7 @@ podTemplate(label: 'mypod',
         containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true),
         containerTemplate(name: 'helm', image: 'alpine/helm', command: 'cat', ttyEnabled: true),
         containerTemplate(name: 'uplift', image: 'gembaadvantage/uplift', command: 'cat', ttyEnabled: true),
-        containerTemplate(name: 'python', image: 'python:3.13-alpine', command: 'cat', ttyEnabled: true),
+        containerTemplate(name: 'python', image: 'python:3.7-alpine', command: 'cat', ttyEnabled: true),
     ],
     volumes: [hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'),]) {
     node('mypod') {
@@ -22,6 +22,7 @@ podTemplate(label: 'mypod',
 
                 stage('Run Test') {
                     container('python') {
+                        sh "pip install -r /src/requirements.txt"
                         sh "python3 -m unittest /tests/test.py"
                     }
                 }
