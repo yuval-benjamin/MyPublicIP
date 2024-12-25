@@ -1,6 +1,3 @@
-# .uplift.yml
-# Example of bumping a package.json file
-
 github:
   url: https://github.com
 
