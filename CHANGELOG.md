@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.4.2](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.2) - 2024-12-25
+
+- [`1ff85a6`](https://github.com/yuval-benjamin/MyPublicIP/commit/1ff85a602f5a5f7a079adc4f5ef8faf6d6139703) fix: versions
+- [`14192dc`](https://github.com/yuval-benjamin/MyPublicIP/commit/14192dc69562353f3dab747d137c08b8b03fea53) fix: versions
+- [`472047e`](https://github.com/yuval-benjamin/MyPublicIP/commit/472047e4eddf891d3cab79be9b35f34300eb8577) fix: versions
+- [`fb16001`](https://github.com/yuval-benjamin/MyPublicIP/commit/fb1600106c825c7e67558575ca107fd38f6b8bb1) fix: versions
+- [`4bf2870`](https://github.com/yuval-benjamin/MyPublicIP/commit/4bf287039f91dcb338f458b26a5bf060c04bcfa9) fix: versions
+- [`ce15ef2`](https://github.com/yuval-benjamin/MyPublicIP/commit/ce15ef25c156f79a23855d94a0d5a8259fba0847) fix: downgrade requirments
+- [`8ab1092`](https://github.com/yuval-benjamin/MyPublicIP/commit/8ab10923256c82c20cf3625bacee6229e4d44f6b) Merge branch 'fix/jeknins-fix' of github.com:yuval-benjamin/MyPublicIP into fix/jeknins-fix
+- [`fcf6723`](https://github.com/yuval-benjamin/MyPublicIP/commit/fcf6723f9add86350ad026e08854adc3c6e37cd9) fix: go back to old dockerfile and change jenkinsfile accordingly
+
 ## [v0.4.1](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.1) - 2024-12-25
 
 - [`5a169d4`](https://github.com/yuval-benjamin/MyPublicIP/commit/5a169d4a00b992845b073d6b5b8c5c0cfbe6aec5) fix: the jenkinsfile has a problem
