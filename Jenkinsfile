@@ -47,6 +47,15 @@ podTemplate(label: 'mypod',
                         }
                     }
 
+                    stage('Bump Version & Tag') {
+                        container('uplift') {
+                            sh """
+                                git remote set-url origin https://
+                                uplift release --fetch-all
+                            """
+                        }
+                    }
+
                 }
 
                 stage('Notify A Successfull Build To Slack') {

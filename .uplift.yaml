@@ -13,6 +13,7 @@ bumps:
   regex:
   - pattern: "IMAGE_TAG = $VERSION"
     semver: true
+
 commitAuthor:
   name: "yuval-bot"
   email: "yuval-bot@gmail.com"
