@@ -78,7 +78,7 @@ podTemplate(label: 'mypod',
 
                 stage('Cleanup') {
                     container('docker') {
-                        sh 'docker system prune -af'
+                        sh 'docker rmi -f $(docker images -aq)'
                     }
                 }
 
