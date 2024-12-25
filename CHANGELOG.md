@@ -6,6 +6,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+
+## [v0.4.3](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.3) - 2024-12-25
+
+- [`a2619b7`](https://github.com/yuval-benjamin/MyPublicIP/commit/a2619b74e3362751c1eef04ebb0b743ae5c68daa) Merge branch 'fix/jeknins-fix' of github.com:yuval-benjamin/MyPublicIP into fix/jeknins-fix
+- [`ebe4bac`](https://github.com/yuval-benjamin/MyPublicIP/commit/ebe4baccd87acd3d393b0f66e05a5320e577c8a8) fix: version changed before install
+
+## [v0.4.2](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.2) - 2024-12-25
+
+- [`1ff85a6`](https://github.com/yuval-benjamin/MyPublicIP/commit/1ff85a602f5a5f7a079adc4f5ef8faf6d6139703) fix: versions
+- [`14192dc`](https://github.com/yuval-benjamin/MyPublicIP/commit/14192dc69562353f3dab747d137c08b8b03fea53) fix: versions
+- [`472047e`](https://github.com/yuval-benjamin/MyPublicIP/commit/472047e4eddf891d3cab79be9b35f34300eb8577) fix: versions
+- [`fb16001`](https://github.com/yuval-benjamin/MyPublicIP/commit/fb1600106c825c7e67558575ca107fd38f6b8bb1) fix: versions
+- [`4bf2870`](https://github.com/yuval-benjamin/MyPublicIP/commit/4bf287039f91dcb338f458b26a5bf060c04bcfa9) fix: versions
+- [`ce15ef2`](https://github.com/yuval-benjamin/MyPublicIP/commit/ce15ef25c156f79a23855d94a0d5a8259fba0847) fix: downgrade requirments
+- [`8ab1092`](https://github.com/yuval-benjamin/MyPublicIP/commit/8ab10923256c82c20cf3625bacee6229e4d44f6b) Merge branch 'fix/jeknins-fix' of github.com:yuval-benjamin/MyPublicIP into fix/jeknins-fix
+- [`fcf6723`](https://github.com/yuval-benjamin/MyPublicIP/commit/fcf6723f9add86350ad026e08854adc3c6e37cd9) fix: go back to old dockerfile and change jenkinsfile accordingly
+
+## [v0.4.1](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.1) - 2024-12-25
+
+- [`5a169d4`](https://github.com/yuval-benjamin/MyPublicIP/commit/5a169d4a00b992845b073d6b5b8c5c0cfbe6aec5) fix: the jenkinsfile has a problem
+- [`ef7fb3e`](https://github.com/yuval-benjamin/MyPublicIP/commit/ef7fb3e3505d7651d30bbcd41a14511baa5c327d) ci: Updating version: v0.4.0. [ci skip]
+=======
 ## [v0.4.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.0) - 2024-12-25
 
 - [`46d3694`](https://github.com/yuval-benjamin/MyPublicIP/commit/46d3694af654209e15da5ba13649b26e749bd097) Merge pull request #11 from yuval-benjamin/fix/helm
@@ -13,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - [`3d16aaa`](https://github.com/yuval-benjamin/MyPublicIP/commit/3d16aaa42e3b37207185115ed180bc3166eccc0d) fix: minor changes to yamls
 - [`e76bc35`](https://github.com/yuval-benjamin/MyPublicIP/commit/e76bc35d0a2bff3855c59e1d91c1fd0d154b606a) Merge pull request #10 from yuval-benjamin/feat/add-helm
 - [`d318fdb`](https://github.com/yuval-benjamin/MyPublicIP/commit/d318fdb086498d37d68b303989390719ac9919dd) feat: adding labels to all yamls
+
 
 ## [v0.3.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.3.0) - 2024-12-25
 
