@@ -6,35 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-## [v2.0.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v2.0.0) - 2024-12-25
-
-- [`af6a614`](https://github.com/yuval-benjamin/MyPublicIP/commit/af6a61446721a3a2885b9a207a817d3f9e5770dc) fix: Removing merge version bump
-- [`48099d3`](https://github.com/yuval-benjamin/MyPublicIP/commit/48099d399edfc1e6de7f13f1bbff4bf4849265f4) Delete .DS_Store
-- [`58796cd`](https://github.com/yuval-benjamin/MyPublicIP/commit/58796cd1941c7dc52c222b51674dece8c598bed1) ci(release): updating version: v2.0.0. [ci skip]
-- [`c2d72ee`](https://github.com/yuval-benjamin/MyPublicIP/commit/c2d72ee5242fe6c61d31f8da2b8a9b791fca5f1a) fix: adding .DS_Store to .gitignore
-- [`c2689df`](https://github.com/yuval-benjamin/MyPublicIP/commit/c2689df595ef74c0eef3fd59492fa72730befd7c) Fix/bump versions (#8)
-- [`b1f186b`](https://github.com/yuval-benjamin/MyPublicIP/commit/b1f186bad17e15c8618f1708556599e7aa4ab3e5) ci(release): updating version: v1.0.0. [ci skip]
-- [`e8e5715`](https://github.com/yuval-benjamin/MyPublicIP/commit/e8e5715b059c285e2521ca166332d2ced686b18f) feat!: send an email to the customer when a product is shipped
-- [`edcd0e4`](https://github.com/yuval-benjamin/MyPublicIP/commit/edcd0e44e4d524c0a8b30082ec3121c7df11e604) feat!:Trying to bump major again
-- [`979e1ac`](https://github.com/yuval-benjamin/MyPublicIP/commit/979e1ac0dc17d17970566a6a722f6eee20ee29bb) Merge branch 'fix/bump-versions' of github.com:yuval-benjamin/MyPublicIP into fix/bump-versions
-- [`a451321`](https://github.com/yuval-benjamin/MyPublicIP/commit/a4513216bc411c13586e92169d5ec0a118715297) BREAKING CHANGE: Trying to bump major
-- [`5087527`](https://github.com/yuval-benjamin/MyPublicIP/commit/5087527873eff4baf48fe705564a536eed7bc9d1) ci(release): updating version: v0.2.0. [ci skip]
-- [`8d3f999`](https://github.com/yuval-benjamin/MyPublicIP/commit/8d3f999497534fb4ed1e3a35f1a58ad520508c0f) feat: Trying to bump app again
-- [`071d93f`](https://github.com/yuval-benjamin/MyPublicIP/commit/071d93f6055be992cf12763ebbe2f330fcb5155e) Merge branch 'fix/bump-versions' of github.com:yuval-benjamin/MyPublicIP into fix/bump-versions
-- [`e4512a9`](https://github.com/yuval-benjamin/MyPublicIP/commit/e4512a9575875b48929525da3b1b027b111d2c9a) feat: Trying to bump app again
-- [`6cd1a39`](https://github.com/yuval-benjamin/MyPublicIP/commit/6cd1a398fcbbaadffd0c81502bb6d05ac10b625e) ci(release): updating version: v0.1.0. [ci skip]
-- [`d32666d`](https://github.com/yuval-benjamin/MyPublicIP/commit/d32666d26bd29c7952cbb30432800802ddc24673) fix: changed the jenkinsfile
-- [`c7f4417`](https://github.com/yuval-benjamin/MyPublicIP/commit/c7f4417e6f99e16e301463bd3a6847fae1399e09) fix: changed the jenkinsfile
-- [`d8935dc`](https://github.com/yuval-benjamin/MyPublicIP/commit/d8935dc3dae03dbee0056f62084fa4bac349d959) fix: changed the jenkinsfile
-- [`42df926`](https://github.com/yuval-benjamin/MyPublicIP/commit/42df9269015ed65af74ecae97f7b958dae0516a3) merge main
-- [`d9f45e3`](https://github.com/yuval-benjamin/MyPublicIP/commit/d9f45e350fe69f7676e7dbafc88728b02faadbf8) feat: first uplift try
-- [`62a9672`](https://github.com/yuval-benjamin/MyPublicIP/commit/62a9672a5d9dba6c2db45f1c786c16fbe4b319ea) feat: first uplift try
-- [`95ce1e6`](https://github.com/yuval-benjamin/MyPublicIP/commit/95ce1e6b48d3541ebecbdcac22350727f041b41b) feat: first uplift try
-
-## [v1.0.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v1.0.0) - 2024-12-25
-
-- [`e8e5715`](https://github.com/yuval-benjamin/MyPublicIP/commit/e8e5715b059c285e2521ca166332d2ced686b18f) feat!: Trying to bump major
-
 ## [v0.2.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.2.0) - 2024-12-25
 
 - [`e4512a9`](https://github.com/yuval-benjamin/MyPublicIP/commit/e4512a9575875b48929525da3b1b027b111d2c9a) feat: Trying to bump app again
