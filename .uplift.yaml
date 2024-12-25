@@ -1,0 +1,19 @@
+github:
+  url: https://github.com
+
+bumps:
+- file: helm/Chart.yaml
+  regex:
+  - pattern: "appVersion: $VERSION"
+    semver: true
+- file: Jenkinsfile
+  regex:
+  - pattern: "IMAGE_TAG = '.*'"
+    semver: true
+    count: 1
+
+commitAuthor:
+  name: "Jenkins-bot"
+  email: "Jenkins-bot@gmail.com"
+
+commitMessage: "ci(release): updating version: $VERSION. [ci skip]"
