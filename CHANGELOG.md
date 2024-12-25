@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.4.3](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.3) - 2024-12-25
+
+- [`a2619b7`](https://github.com/yuval-benjamin/MyPublicIP/commit/a2619b74e3362751c1eef04ebb0b743ae5c68daa) Merge branch 'fix/jeknins-fix' of github.com:yuval-benjamin/MyPublicIP into fix/jeknins-fix
+- [`ebe4bac`](https://github.com/yuval-benjamin/MyPublicIP/commit/ebe4baccd87acd3d393b0f66e05a5320e577c8a8) fix: version changed before install
+
 ## [v0.4.2](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.2) - 2024-12-25
 
 - [`1ff85a6`](https://github.com/yuval-benjamin/MyPublicIP/commit/1ff85a602f5a5f7a079adc4f5ef8faf6d6139703) fix: versions
