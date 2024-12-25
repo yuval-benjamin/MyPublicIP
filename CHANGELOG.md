@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.4.1](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.1) - 2024-12-25
+
+- [`5a169d4`](https://github.com/yuval-benjamin/MyPublicIP/commit/5a169d4a00b992845b073d6b5b8c5c0cfbe6aec5) fix: the jenkinsfile has a problem
+- [`ef7fb3e`](https://github.com/yuval-benjamin/MyPublicIP/commit/ef7fb3e3505d7651d30bbcd41a14511baa5c327d) ci: Updating version: v0.4.0. [ci skip]
+
 ## [v0.3.0](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.3.0) - 2024-12-25
 
 - [`5cfb5f1`](https://github.com/yuval-benjamin/MyPublicIP/commit/5cfb5f1e0d58e82d59c37911c60d2f686a676448) Fix/bump versions (#9)
