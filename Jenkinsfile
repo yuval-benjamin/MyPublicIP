@@ -23,7 +23,7 @@ podTemplate(label: 'mypod',
                 stage('Run Test') {
                     container('python') {
                         sh "pip install -r ./src/requirements.txt"
-                        sh "python3 -m unittest ./tests/test.py"
+                        sh "python3 -m unittest tests.test"
                     }
                 }
 
