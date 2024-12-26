@@ -35,6 +35,7 @@ and access the app on http://<KubernetesIP
 ## Challenges I Encountered 
 * Issues with creating an app password with Google - Used Slack instead. 
 * App version staying static between different commits - Used [Uplift](http://upliftci.dev), an automatic tool to bump versions and create tags, according to conventional commits (That also creates a CHANGELOG!). 
+* For me, all architecture is local, so GitHub can't send a webhook to Jenkins. Making it impossible for Jenkins to run everytime a commit is pushed - Run jobs manually / put Jenkins instance on the cloud. 
 
 ## What's Next?
 - Moving all credentials from Jenkins to one place (e.g AWS Secrets Manager).
