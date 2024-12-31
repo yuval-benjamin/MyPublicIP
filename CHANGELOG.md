@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
+## [v0.4.5](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.5) - 2024-12-31
+
+- [`705fe5f`](https://github.com/yuval-benjamin/MyPublicIP/commit/705fe5f115f2ccfeaeb8314bea1e6420d88f53ad) fix: make sure everything works
+- [`47fb055`](https://github.com/yuval-benjamin/MyPublicIP/commit/47fb05575b2af7a7d8cb8138e45dfbbfafad6300) docs: webhook issue
+- [`aee1c1f`](https://github.com/yuval-benjamin/MyPublicIP/commit/aee1c1f5aacbe2bd20976b7bff89e0b8ff2f2bcb) docs: adding a Slack docs image
+
 ## [v0.4.4](https://github.com/yuval-benjamin/MyPublicIP/releases/tag/v0.4.4) - 2024-12-25
 
 - [`e8871fa`](https://github.com/yuval-benjamin/MyPublicIP/commit/e8871fa8c29e93ddfeb512ce0063a7e90b6c32e3) Docs/final docs (#13)
